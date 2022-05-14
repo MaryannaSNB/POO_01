@@ -1,5 +1,5 @@
-<!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,65 +8,61 @@
 
 <body>
 
-     <script>
+    <script>
 
-      // Criando uma classe para objetos do tipo carro.
+        // Criando uma classe para objetos carro.
         class Carro {
 
-          // Atributos
-          marca; 
-          modelo;
-          cor = 'Branco' 
+            // Atributos
+            marca;
+            modelo;
+            cor = 'branco';
 
-          // Métodos
+            // Métodos
             ligar(acao) {
-                if (acao == 'on');{
-                  document.write('Vrum vrum!');
-                }
-                  
-                
-               
+                if (acao == 'on')
+                    document.write('Vrum vrum!');
+                else
+                    document.write('<br>tic');
             }
-         
+
+            acendeFarol() {
+                document.write('<br>LUZ!');
+            }
+
         }
-      
-    
 
-
-        // Criando Objetos -> Instância de classe 'Carro'
+        // Criando objetos -> Instância da classe 'Carro'.
         var fusca = new Carro();
 
-        //  Ler a cor do objeto
+        // Ler a cor do objeto.
         console.log(fusca.marca, fusca.modelo, fusca.cor);
 
-        // Alterar atributos
+        // Alterar atributos.
         fusca.marca = 'Volkswagem';
-        fusca.modelo = '1950';
-        fusca.cor = 'Azul';
-        console.log(fusca.marca, fusca.modelo, fusca.cor);
-        console.log(fusca);
+        fusca.modelo = '1300';
+        fusca.cor = 'bege';
 
-        // Cria novo objet -> Nova Instância de 'Carro'
+        // Ler a cor do objeto.
+        console.log(fusca.marca, fusca.modelo, fusca.cor);
+
+        // Cria novo objeto -> Nova instância de 'Carro'.
         var opala = new Carro();
         opala.marca = 'Chevrolet';
         opala.modelo = 'SS';
-        opala.cor = 'Rosa';
+        opala.cor = 'rosa';
 
         // Consultando objeto
-        console.log(opala.marca, opala.modelo, opala.cor);
-        console.log(opala);
         console.log(fusca, opala);
 
-        // Executando métodos
+        // Executando método.
         fusca.ligar('on');
-        opala.ligar('off')
-        
-
-
-
-
+        opala.ligar('off');
+        fusca.acendeFarol();
+        opala.acendeFarol();
 
     </script>
-    
+
 </body>
+
 </html>
