@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercício 1</title>
+</head>
+
+<body>
+    <script>
+        //Crie uma classe que defina frutas de qualquer tipo
+
+        //Classe frutas
+        class Frutas {
+
+            //Atributos privados
+            #nome;
+            #cor;
+            #sabor;
+
+            //Métodos 'set'
+            setNome(nome) {
+                this.#nome = nome;
+            }
+
+            setCor(cor) {
+                this.#cor = cor;
+            }
+
+            setSabor(sabor) {
+                this.#sabor = sabor;
+            }
+
+            //Métodos 'get'
+
+            getNome(nome) {
+                return this.#nome
+            }
+            getCor(cor) {
+                return this.#cor
+            }
+            getSabor(sabor) {
+                return this.#sabor
+            }
+
+        }
+
+        //Cria uma instância de 'Frutas'
+        let newFruta = new Frutas();
+
+        //Define / altera atributos
+        newFruta.setNome('Limão');
+        newFruta.setCor('Verde');
+        newFruta.setSabor('Azedo');
+
+        console.log('newFruta: ', newFruta);
+
+        //Criando uma nova instância
+        var fruta = new Frutas();
+
+        //Atribuir
+        fruta.setNome('Banana');
+        fruta.setCor('Amarelo');
+        fruta.setSabor('Doce');
+
+        //Atribuir
+        console.log('fruta: ', fruta);
+    </script>
+
+</body>
+
+</html>

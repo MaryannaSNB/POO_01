@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercício 3</title>
+</head>
+
+<body>
+    <script>
+
+        //Criando uma classe para definir animais de estimação
+
+        class Animais {
+
+            //Atributos privados
+            #nome;
+            #raca;
+            #porte;
+
+            //Método 'set'
+            setNome(nome) {
+                this.#nome = nome;
+            }
+            setRaca(raca) {
+                this.#raca = raca;
+            }
+            setPorte(porte) {
+                this.#porte = porte;
+            }
+
+            //Getters
+            getNome() {
+                return this.#nome;
+            }
+            getRaca() {
+                return this.#raca;
+            }
+            getPorte() {
+                return this.#porte
+            }
+
+
+
+            //Método construtor
+            constructor(animaisNome, animaisRaca, animaisPorte) {
+
+                //Executando métodos 'set'
+                this.setNome(animaisNome);
+                this.setRaca(animaisRaca);
+                this.setPorte(animaisPorte);
+            }
+
+
+        }
+
+
+        //Criando objteto
+        var animal = new Animais('Marley', 'Labrador', 'Grande');
+
+        //Exiba
+        console.log(animal);
+
+        //Criando novo objeto
+        let animalNovo = new Animais('Pernalonga', 'pinscher', 'Pequeno');
+        console.log(animalNovo);
+                
+        document.write(`Animal 1: ${animal.getNome()}`)
+        document.write(`Animal 2: ${animal.getPorte()}`)
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

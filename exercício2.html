@@ -1,0 +1,144 @@
+<!DOCTYPE html><!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: monospace;
+        }
+
+        table {
+            border-spacing: 0;
+            border-collapse: collapse;
+            border: 1px solid black;
+            margin: auto;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            margin: 0;
+            padding: .5rem;
+        }
+    </style>
+    <title>Exercício 1.2</title>
+</head>
+
+<body>
+
+    <h1>Exercício 1.2</h1>
+    <p>Observe o diagrama de classes abaixo e reproduza-o usando JavaScript:</p>
+
+    <table>
+        <tr>
+            <th>Carro</th>
+        </tr>
+        <tr>
+            <td>
+                - marca : string<br>
+                - modelo : string<br>
+                - cor : string<br>
+                - ano : string
+            </td>
+        </tr>
+        <tr>
+            <td>
+                + setMarca(marca) : void<br>
+                + setModelo(modelo) : void<br>
+                + setCor(cor) : void<br>
+                + setAno(ano) : void<br>
+                <br>
+                + getMarca() : string<br>
+                + getModelo() : string<br>
+                + getCor() : string<br>
+                + getAno() : string
+            </td>
+        </tr>
+    </table>
+
+    <p>Teste a classe.</p>
+
+    <script>
+
+        // Cria classe 'Carro'
+        class Carro {
+
+            // Atributos
+            #marca
+            #modelo
+            #cor
+            #ano
+
+            // Setters
+            setMarca(marca) {
+                // Faço sanitizações, validações, etc...
+
+                // Atribuição
+                this.#marca = marca;
+            }
+            setModelo(modelo) {
+
+                // Faço sanitizações, validações, etc...
+
+                // Atribuição
+                this.#modelo = modelo;
+            }
+            setCor(cor) {
+                // Faço sanitizações, validações, etc...
+
+                // Atribuição
+                this.#cor = cor;
+            }
+            setAno(ano) {
+                // Faço sanitizações, validações, etc...
+
+                // Atribuição
+                this.#ano = ano;
+            }
+
+            // Getters
+            getMarca() {
+                return this.#marca
+             }
+            getModelo() {
+                return this.#modelo
+             }
+            getCor() { 
+                return this.#cor
+            }
+            getAno() {
+                return this.#ano
+             }
+
+        }
+
+        // Instância
+        let fusca = new Carro();
+
+        // Define atributos
+        fusca.setMarca('Volkswagem');
+        fusca.setModelo('1300');
+        fusca.setCor('prata');
+        fusca.setAno('1980');
+
+        // Exibe objeto no console
+        console.log('Fusca: ', fusca);
+
+        // Exibe objeto no documento
+        document.write(`
+            <p>Fusca:</p>
+            <ul>
+                <li>Marca: ${fusca.getMarca()}</li>
+                <li>Modelo: ${fusca.getModelo()}</li>
+                <li>Cor: ${fusca.getCor()}</li>
+                <li>Ano de fabricação: ${fusca.getAno()}</li>
+            </ul>
+        `);
+
+    </script>
+
+</body>
+
+</html>
