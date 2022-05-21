@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POO 5.1</title>
+</head>
+
+<body>
+
+    <script>
+
+        class Produto {
+
+            #origem
+            #preco
+            #marca
+            #codigo
+            #descricao
+
+            constructor(codigo) { this.setCodigo(codigo) }
+
+            setOrigem(origem) { this.#origem = origem }
+            setPreco(preco) { this.#preco = preco }
+            setMarca(marca) { this.#marca = marca }
+            setCodigo(codigo) { this.#codigo = codigo }
+            setDescricao(descricao) { this.#descricao = descricao }
+
+            getOrigem() { return this.#origem }
+            getPreco() { return this.#preco }
+            getMarca() { return this.#marca }
+            getCodigo() { return this.#codigo }
+            getDescricao() { return this.#descricao }
+
+        }
+
+        class Vestuario extends Produto {
+
+            #tipo
+            #tamanho
+            #cor
+
+            constructor(codigo, tipo) {
+                super(codigo) // Executar o construtor da classe pai                
+                this.setTipo(tipo)
+            }
+
+            setTipo(tipo) { this.#tipo = tipo }
+            setTamanho(tamanho) { this.#tamanho = tamanho }
+            setCor(cor) { this.#cor = cor }
+
+            getTipo() { return this.#tipo }
+            getTamanho() { return this.#tamanho }
+            getCor() { return this.#cor }
+
+        }
+
+
+        var bone = new Vestuario('B0N3', 'Chapéu');
+
+        class Alimento extends Produto {
+
+            #tipo
+            #quantidade
+
+            // Executar o construtor da classe pai 
+
+            constructor(codigo, tipo) {
+                super(codigo)
+                this.setTipo(tipo)
+            }
+
+            setTipo(tipo) { this.#tipo = tipo }
+            setQuantidade(quantidade) { this.#quantidade = quantidade }
+
+            getTipo() { return this.#tipo }
+            getQuantidade() { return this.#quantidade }
+
+        }
+
+        //Instância de Alimento onde o 'código' é sempre obrigatório para 'Produto'
+        var arroz = new Alimento('000123', 'Integral', '20');
+
+        //Seta atributos do objeto
+        arroz.setMarca('Carreteiro');
+        arroz.setQuantidade('15');
+        arroz.setOrigem('Brasil');
+        arroz.setDescricao('Parbolizado')
+        arroz.setPreco('24,99');
+
+        //Exibe o código
+        console.log(arroz)
+
+        class Moveis extends Produto {
+
+            #material
+            #quantidade
+
+            // Executar o construtor da classe pai 
+
+            constructor(material, quantidade) {
+                super(material)
+                this.setQuantidade(quantidade)
+            }
+
+            setMaterial(material) { this.#material = material }
+            setQuantidade(quantidade) { this.#quantidade = quantidade }
+
+            getMaterial() { return this.#material }
+            getQuantidade() { return this.#quantidade }
+
+        }
+
+        //Instância de Moveis onde o 'código' é sempre obrigatório para 'Produto'
+
+        var cama = new Moveis('02', 'Madeira', '35');
+
+        //Seta atributos do objeto
+        cama.setMaterial('Madeira');
+        cama.setQuantidade('35');
+
+        //Exibe o código
+        console.log(cama)
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
